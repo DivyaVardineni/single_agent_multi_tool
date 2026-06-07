@@ -12,7 +12,7 @@ load_dotenv()
 
 app=FastAPI()
 
-OPENWEATHER_API_KEY="OPENWEATHER_API_KEY"
+OPENWEATHER_API_KEY=os.getenv("OPENWEATHER_API_KEY")
 
 conn=mysql.connector.connect(
     host=os.getenv("DB_HOST"),
@@ -20,7 +20,7 @@ conn=mysql.connector.connect(
     user=os.getenv("DB_USER"),
     password=os.getenv("DB_PASSWORD"),
     database=os.getenv("DB_NAME"),
-     ssl_disabled=False
+    ssl_disabled=False
 )
 
 
@@ -103,11 +103,11 @@ def webtool(question:str):
 
 llm=ChatGroq(
     model="llama-3.3-70b-versatile",
-    api_key="API_KEY"
+    api_key=os.getenv("API_KEY")
 )
 
 client=TavilyClient(
-    api_key="api_key_tvly"
+    api_key=os.getenv("api_key_tvly")
 )
 
 agent=create_agent(
