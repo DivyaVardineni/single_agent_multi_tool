@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+langchain
+langchain-groq
+mysql-connector-python
+requests
+python-dotenv
+tavily-python
+pandas
+streamlit
