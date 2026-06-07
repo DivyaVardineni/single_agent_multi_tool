@@ -7,7 +7,7 @@ import datetime
 
 
 
-server_loc="http://127.0.0.1:8000"
+server_loc=st.secrets["SERVER_LOC"]
 
 w_tab , s_tab , web_tab=st.tabs(["weather Tool","SQL Tool","Web Tool"])
 
